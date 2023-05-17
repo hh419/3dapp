@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Web 3D Coca Cola</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- import stylesheets -->
+    <link rel='stylesheet' type='text/css' href='application/css/x3dom.css'>
+    <link rel="stylesheet" href="application/css/bootstrap.css"/>
+    <link rel="stylesheet" href="application/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="application/css/jquery.fancybox.min.css">
+    <link rel='stylesheet' type='text/css' href='application/css/x3dom.css'>
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="application/scripts/js/bootstrap.bundle.min.js"></script>
+    <script src="application/scripts/js/themes.js"></script>
+    <script src="application/scripts/js/modelInteraction.js"></script>
+
+    <script type='text/javascript' src='application/scripts/js/x3dom.js'></script>
+    <script id="x3d"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100" id="body">
+
+<!-- navbar with logo -->
+<nav id="header" class="navbar navbar-expand-sm navbar_custom sticky-top">
+    <div class="container-fluid">
+        <!-- logo -->
+        <div class="logo">
+            <a class="navbar-brand" href="#">
+                <h1>C</h1>
+                <h1>oca</h1>
+                <h2>Cola</h2>
+                <h3>Journey</h3>
+                <p>Refreshing the world, one story at a time</p>
+            </a>
+        </div>
+
+        <!-- Collapsible Navigation Menu Icon -->
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse ">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- nav links -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="cokeee.html" role="button">
+                        Drinks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a tabindex="0" class="nav-link" href="#" role="button" data-bs-toggle="popover"
+                       data-bs-trigger="focus" title="About Web 3D Applications"
+                       data-bs-content="3D Apps is a final year module ...">About</a>
+                </li>
+                <li class=" nav-item">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- x3d model view  -->
+<div class="row bgImage m-1">
+    <!-- Column to hold the X3D Model -->
+    <div class="col-sm-9 ">
+        <div class="card text-left" id="index-top-bar">
+            <div class="card-header">
+                <ul class="nav nav-tabs" id="myTab">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#coke" type="button" role="tab"
+                           aria-controls="coke" aria-selected="true">Coke</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#fanta" type="button" role="tab"
+                           aria-controls="fanta" aria-selected="true">Fanta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#sprite" type="button" role="tab"
+                           aria-controls="sprite" aria-selected="true">Sprite</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Bootstrap card body to hold information about the X3D model-->
+
+            <div class="tab-content" id="myTabContent">
+                <div id="coke" class="tab-pane active">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Coca Cola Bottle X3D Model</h4>
+
+                        <!-- Place the X3D code here -->
+                        <div class="model3D">
+                            <x3d>
+                                <scene class="bgCoke">
+                                    <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="../assignment/assets/models/can_animation.x3d"></inline>
+                                </scene>
+                            </x3d>
+                        </div>
+
+                        <p class="card-text">This X3D model of the Coca Cola Bottle has been created in 3ds Max,
+                            exported to VRML97 and converted, using the instantreality transcoders, to X3D for
+                            display online.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="card-subtitle">Camera Views</h5>
+                                <div class="camera-btns">
+                                    <p class="card-text">These buttons select a range of X3D model viewpoints</p>
+                                    <div class="btn-group ">
+                                        <a href="#" class="btn btn-primary btn-responsive camera-font">Front</a>
+                                        <a href="#" class="btn btn-secondary btn-responsive camera-font">Back</a>
+                                        <a href="#" class="btn btn-success btn-responsive camera-font">Left</a>
+                                        <a href="#" class="btn btn-danger btn-responsive camera-font">Right</a>
+                                        <a href="#" class="btn btn-warning btn-responsive camera-font">Top</a>
+                                        <a href="#"
+                                           class="btn btn-outline-dark disabled btn-responsive camera-font">Off</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="card-subtitle">Animation Options</h5>
+                                <div class="camera-btns">
+                                    <p class="card-text">These buttons select a range of X3D model animations to
+                                        play.</p>
+                                    <div class="btn-group ">
+                                        <a href="#" class="btn btn-primary btn-responsive" onclick="spin();">RotX</a>
+                                        <a href="#" class="btn btn-secondary btn-responsive">RotY</a>
+                                        <a href="#" class="btn btn-success btn-responsive">RotZ</a>
+                                        <a href="#" class="btn btn-danger btn-responsive" onclick="stopRotation();">Stop</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h5 class="card-subtitle">Render Options</h5>
+                                <div class="camera-btns">
+                                    <p class="card-text">These buttons select a range of X3D model render options.</p>
+                                    <div class="btn-group ">
+                                        <a href="#" class="btn btn-primary btn-responsive">Wire Toggles</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="card-subtitle">Light Options</h5>
+                                <div class="camera-btns">
+                                    <p class="card-text">These buttons select a range of X3D model light options.</p>
+                                    <div class="btn-group ">
+                                        <a href="#" class="btn btn-primary btn-responsive">Default</a>
+                                        <a href="#" class="btn btn-secondary btn-responsive">Omni On/Off</a>
+                                        <a href="#" class="btn btn-success btn-responsive">Target On/Off</a>
+                                        <a href="#" class="btn btn-danger btn-responsive">Headlight On/Off</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="fanta" class="tab-pane fade">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Fanta X3D Model</h4>
+
+                        <!-- Place the X3D code here -->
+                        <div class="model3D">
+                            <x3d>
+                                <scene class="bgCoke">
+                                    <inline url="../assignment/assets/models/fanta_bottle.x3d"></inline>
+                                </scene>
+                            </x3d>
+                        </div>
+
+                        <p class="card-text">This X3D model of the Fanta Bottle has been created in 3ds Max,
+                            exported to VRML97 and converted, using the instantreality transcoders, to X3D for
+                            display online.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="card-subtitle">Camera Views</h5>
+                                <div class="camera-btns">
+                                    <p class="card-text">These buttons select a range of X3D model viewpoints</p>
+                                    <div class="btn-group ">
+                                        <a href="#" class="btn btn-primary btn-responsive camera-font">Front</a>
+                                        <a href="#" class="btn btn-secondary btn-responsive camera-font">Back</a>
+                                        <a href="#" class="btn btn-success btn-responsive camera-font">Left</a>
+                                        <a href="#" class="btn btn-danger btn-responsive camera-font">Right</a>
+                                        <a href="#" class="btn btn-warning btn-responsive camera-font">Top</a>
+                                        <a href="#"
+                                           class="btn btn-outline-dark disabled btn-responsive camera-font">Off</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="card-subtitle">Animation Options</h5>
+                                <div class="camera-btns">
+                                    <p class="card-text">These buttons select a range of X3D model animations to
+                                        play.</p>
+                                    <div class="btn-group ">
+                                        <a href="#" class="btn btn-primary btn-responsive">RotX</a>
+                                        <a href="#" class="btn btn-secondary btn-responsive">RotY</a>
+                                        <a href="#" class="btn btn-success btn-responsive">RotZ</a>
+                                        <a href="#" class="btn btn-danger btn-responsive">Stop</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h5 class="card-subtitle">Render Options</h5>
+                                <div class="camera-btns">
+                                    <p class="card-text">These buttons select a range of X3D model render options.</p>
+                                    <div class="btn-group ">
+                                        <a href="#" class="btn btn-primary btn-responsive">Wire Toggles</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="card-subtitle">Light Options</h5>
+                                <div class="camera-btns">
+                                    <p class="card-text">These buttons select a range of X3D model light options.</p>
+                                    <div class="btn-group ">
+                                        <a href="#" class="btn btn-primary btn-responsive">Default</a>
+                                        <a href="#" class="btn btn-secondary btn-responsive">Omni On/Off</a>
+                                        <a href="#" class="btn btn-success btn-responsive">Target On/Off</a>
+                                        <a href="#" class="btn btn-danger btn-responsive">Headlight On/Off</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sprite" class="tab-pane fade">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Sprite X3D Model</h4>
+
+                        <!-- Place the X3D code here -->
+                        <div class="model3D">
+                            <x3d>
+                                <scene class="bgCoke">
+                                    <inline url="../assignment/assets/models/sprite_can.x3d"></inline>
+                                </scene>
+                            </x3d>
+                        </div>
+
+                        <p class="card-text">This X3D model of the Sprite Bottle has been created in 3ds Max,
+                            exported to VRML97 and converted, using the instant reality transcoders, to X3D for
+                            display online.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="card-subtitle">Camera Views</h5>
+                                <div class="camera-btns">
+                                    <p class="card-text">These buttons select a range of X3D model viewpoints</p>
+                                    <div class="btn-group ">
+                                        <a href="#" class="btn btn-primary btn-responsive camera-font">Front</a>
+                                        <a href="#" class="btn btn-secondary btn-responsive camera-font">Back</a>
+                                        <a href="#" class="btn btn-success btn-responsive camera-font">Left</a>
+                                        <a href="#" class="btn btn-danger btn-responsive camera-font">Right</a>
+                                        <a href="#" class="btn btn-warning btn-responsive camera-font">Top</a>
+                                        <a href="#"
+                                           class="btn btn-outline-dark disabled btn-responsive camera-font">Off</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="card-subtitle">Animation Options</h5>
+                                <div class="camera-btns">
+                                    <p class="card-text">These buttons select a range of X3D model animations to
+                                        play.</p>
+                                    <div class="btn-group ">
+                                        <a href="#" class="btn btn-primary btn-responsive">RotX</a>
+                                        <a href="#" class="btn btn-secondary btn-responsive">RotY</a>
+                                        <a href="#" class="btn btn-success btn-responsive">RotZ</a>
+                                        <a href="#" class="btn btn-danger btn-responsive">Stop</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h5 class="card-subtitle">Render Options</h5>
+                                <div class="camera-btns">
+                                    <p class="card-text">These buttons select a range of X3D model render options.</p>
+                                    <div class="btn-group ">
+                                        <a href="#" class="btn btn-primary btn-responsive">Wire Toggles</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="card-subtitle">Light Options</h5>
+                                <div class="camera-btns">
+                                    <p class="card-text">These buttons select a range of X3D model light options.</p>
+                                    <div class="btn-group ">
+                                        <a href="#" class="btn btn-primary btn-responsive">Default</a>
+                                        <a href="#" class="btn btn-secondary btn-responsive">Omni On/Off</a>
+                                        <a href="#" class="btn btn-success btn-responsive">Target On/Off</a>
+                                        <a href="#" class="btn btn-danger btn-responsive">Headlight On/Off</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Column to hold 3D Image gallery -->
+    <div class="col-sm-3">
+        <div class="card text-left" id="gallery">
+            <div class="card-header gallery-header">
+                Gallery
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">3D Image Gallery</h4>
+                <a href="https://www.coca-cola.co.uk/">
+                    <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg" alt="Coca Cola">
+                </a>
+                <a href="https://www.coca-cola.co.uk/brands/sprite">
+                    <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Coca Cola">
+                </a>
+                <a href="https://www.yourcoca-cola.co.uk/brands/fanta.list">
+                    <img class="card-img-top img-fluid img-thumbnail" src="assets/images/Fanta.jpg" alt="Coca Cola">
+                </a>
+                <p class="card-text">These pictures are short cuts to find out more about teh selected brands/p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End bgImage class -->
+
+<footer class="mt-auto" id="footer">
+    <div class="text-center mt-4 mb-4">&copy 2023 Mobile Web 3D Applications <a href="javascript:swap_theme()">Switch
+        Theme</a> | <a href="https://github.com/hh419/3D-App">GitHub</a></div>
+</footer>
+
+<!-- modal for contact details and references -->
+<div class="modal fade" id="contact" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Contact</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Email:</h6>
+                <p>hh419@sussex.ac.uk</p>
+                <h6>References:</h6>
+                <p>https://benskitchen.com</p>
+                <h6>Statement of Originality:</h6>
+                <p>These web pages are submitted as part requirement for the degree of BSc.Compututing for 
+                    business management at the University of Sussex. 
+                    Tt is the product of my own labour except where indicated in the accompanying codebase. 
+                    This assignment may be freely copied and distributed provided the source is acknowledged. 
+                    I hereby give permission for a copy of this assignment to be loaned out to students in future years</p>
+                <h6>GitHub:</h6>
+                <p>https://github.com/hh419/3D-App</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- javascript imports -->
+
+</body>
+
+</html>

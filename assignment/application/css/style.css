@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "cocaColaFont";
+    src: url("../fonts/LOKICOLA.TTF");
+}
+
+.main_contents {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: rgba(234, 255, 0, 0.13);
+}
+
+/*style the mobile logo */
+.logo {
+    font-family: cocaColaFont, serif;
+    margin-top: 12px;
+    font-size: 28px;
+}
+
+.logo h1 {
+    float: left;
+    margin: -10px 0 -15px;
+    padding: 0 5px 0 0;
+}
+
+.logo h2 {
+    float: left;
+    padding: 0 5px 0 0;
+    margin-bottom: -15px;
+    margin-top: -7px;
+}
+
+.logo h3 {
+    font-size: 20px;
+    float: left;
+    margin-top: 0;
+    margin-bottom: -5px;
+    padding-top: 0;
+    padding-left: 0;
+}
+
+.logo p {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: 5px;
+}
+
+/* CSS Rules TO Override Bootstrap CSS to for height and other things*/
+.navbar_custom {
+    background-color: #9B9B9B; /* Set navbar background color */
+    border-width: 0;
+    min-height: 40px;
+}
+
+/* Override the navbar-brand font color*/
+
+.navbar_custom .navbar-brand {
+    color: #F5F5F5;
+}
+
+/* Override the navbar-brand font hover color*/
+.navbar_custom .navbar-brand:hover {
+    color: #003cb3;
+}
+
+/* NAVIGATION MENU
+*/
+
+/* CSS rules to overwrite the position of the Bootstrap menu
+Bootstrapbay Bootstrap Tutorial Part 11 — CSS Modifications to Navbar and Buttons shows how to do this using Bootstrap 3, the principle should be the same: https://www.youtube.com/watch?v=7v2yC3GyDHU
+
+There is plenty more styling to do than indicated here, in mobile it still defaults to Bootstrap CSS on dropdown!
+*/
+.navbar_custom .navbar-nav > li > a {
+    color: #F5F5F5; /* Font color #F5F5F5 */
+}
+
+/* Override the bootstrap.css text hover color on the navbar*/
+.navbar_custom .navbar-nav > li > a:hover, .navbar_custom .navbar-nav > li > a:focus {
+    color: #003cb3;
+}
+
+.navbar_custom .navbar-nav .nav-item {
+    margin-top: 0;
+}
+
+.navbar_custom .navbar-nav > .active > a:focus, .navbar_custom .navbar-nav > .active > a:hover, .navbar_custom .navbar-nav .nav-item > .active {
+    background-color: #F5F5F5; /* #F5F5F5 for background */
+    color: #ff3333; /* Font color for active font */
+}
+
+.navbar_custom .navbar-nav > li > a:hover, .navbar_custom .navbar-nav > li > a:focus {
+    color: #003cb3;
+}
+
+.navbar_custom .navbar-toggler {
+    border-color: white;
+}
+
+.navbar_custom .navbar-toggler {
+    outline: none !important;
+}
+
+.navbar-text > a {
+    font-size: 10px;
+}
+
+.navbar-text > p {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Lifted form the bootsrap.css file, and modified to emulate the nav-bar menu styling */
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #ff3333; /* Font color for active font */
+    background-color: #3399ff; /* Blue color for background */
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.nav-tabs .nav-link {
+    color: black;
+    font-size: 20px;
+    border: 1px black;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+/* Added this to emulate the nav-bar link styling */
+.nav-tabs .nav-link:hover {
+    color: blue;
+    border: 1px black;
+}
+
+.inter-regular {
+    font-family: 'Inter', sans-serif;
+}
+
+.inter-bold {
+    font-family: 'Inter', sans-serif;
+    font-style: bold;
+}
+
+.inter-black {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+}
+
+.nav-item, .dropdown-item {
+    font-size: 0.75rem;
+}
+
+.navbar-toggler {
+    border: 0px solid transparent;
+    padding: 0.1rem 0.1rem;
+    color: lightgray !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.05rem;
+}
+
+.border {
+    border: 1px solid black !important
+}
+
+.border-white {
+    border: 1px solid white !important
+}
+
+.bg-main-img {
+    background-image: url('../assets/images/site_images/main_3D.jpg');
+}
+
+.text-white {
+    color: #f8f8f2;
+}
+
+X3D, x3d {
+    width: 100%;
+    height: 100%
+}
+
+.border-side {
+    border-right: 1px solid rgba(216, 216, 216, 0.25);
+}
+
+.strap_under {
+    font-size: 0.5rem;
+}
+.model3D {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 30vmax;
+}
+

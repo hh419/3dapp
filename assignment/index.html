@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Web 3D Coca Cola</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- import stylesheets -->
+    <link rel='stylesheet' type='text/css' href='application/css/x3dom.css'>
+    <link rel="stylesheet" href="application/css/bootstrap.css"/>
+    <link rel="stylesheet" href="application/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="application/css/jquery.fancybox.min.css">
+    <link rel='stylesheet' type='text/css' href='css/x3dom.css'>
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="application/scripts/js/bootstrap.bundle.min.js"></script>
+    <script src="application/scripts/js/themes.js"></script>
+    <script src="application/scripts/js/modelInteraction.js"></script>
+
+    <script type='text/javascript' src='js/x3dom.js'></script>
+    <script id="x3d"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100" id="body">
+
+<!-- navbar with logo -->
+<nav id="header" class="navbar navbar-expand-sm navbar_custom sticky-top">
+    <div class="container-fluid">
+        <!-- logo -->
+        <div class="logo">
+            <a class="navbar-brand" href="#">
+                <h1>C</h1>
+                <h1>oca</h1>
+                <h2>Cola</h2>
+                <h3>Journey</h3>
+                <p>Refreshing the world, one story at a time</p>
+            </a>
+        </div>
+
+        <!-- Collapsible Navigation Menu Icon -->
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse ">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- nav links -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="cokeee.html" role="button">
+                        Drinks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a tabindex="0" class="nav-link" href="#" role="button" data-bs-toggle="popover"
+                       data-bs-trigger="focus" title="About Web 3D Applications"
+                       data-bs-content="3D Apps is a final year module ...">About</a>
+                </li>
+                <li class=" nav-item">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Main Body -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="main_3d_image">
+                <div id="main_text" class="col-xs-12 col-sm-4">
+                    <h2>Coca Cola Great Britain</h2>
+                    <h3>Founded by Dr John S Pemberton</h3>
+                    <p class="p">The Coca Cola Company is the world's leading manufacturer, marketer and distributor of
+                        non-alcoholic
+                        beverage concentrates and syrups, and produces nearly 400 brands.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Coca Cola -->
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card" id="index-top-bar">
+                <a href="#">
+                    <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg" alt="Coca Cola">
+                </a>
+                <div class="card-body">
+                    <h3>Coca Cola</h3>
+                    <p>It was 1886, and in New York Harbour, workers were constructing the Statue of Liberty. Eight
+                        hundred miles away, another great American symbol was about to be unveiled.
+                        Like many people who change history, John Pemberton, an Atlanta pharmacist, was inspired by
+                        simple curiosity. One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it
+                        was done, he carried it a few doors down to Jacobs' Pharmacy. Here, the mixture was combined
+                        with carbonated water and sampled by customers who all agreed - this new drink was something
+                        special. So Jacobs' Pharmacy put it on sale for five cents (about 3p) a glass.</p>
+                    <a href="https://www.coca-cola.co.uk/" class="btn btn-primary">Find out more ...</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sprite -->
+        <div class="col-sm-4">
+            <div class="card" id="myTab">
+                <a href="#">
+                    <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Sprite">
+                </a>
+                <div class="card-body">
+                    <h3>Sprite</h3>
+                    <p>First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's leading
+                        lemon and lime flavoured soft drink and is sold in more than 190 different countries.
+                        Sprite Zero, part of our no sugar Zero range, offers the delicious lemon lime taste of Sprite
+                        without the sugar or calories. </p>
+                    <a href="https://www.coca-cola.co.uk/brands/sprite" class="btn btn-primary">Find out more ...</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dr Pepper -->
+        <div class="col-sm-4">
+            <div class="card" id="gallery">
+                <a href="#">
+                    <img class="card-img-top img-fluid img-thumbnail" src="assets/images/Fanta.jpg" alt="Fanta">
+                </a>
+                <div class="card-body">
+                    <h3>Fanta</h3>
+                    <p>Fanta started back in the World War II days when a trading ban was placed on Germany by the Allies.
+                        The Coca-Cola Company wasn’t able to import the syrup needed to produce Coca-Cola in Germany.                        
+                        Dr Schetelig decided to create a new product for the German market instead of Coca-Cola which could be made using only ingredients available in Germany which at the time was mainly apple fiber and a by-product of cheese.
+                        It tasted of orange and was yellow colored.    
+                        The name Fanta comes from ‘fantasie’ which is German for ‘imagination’.</p>
+                    <a href="https://www.yourcoca-cola.co.uk/brands/fanta.list" class="btn btn-primary">Find out more ...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Your 3D App Footer -->
+<footer class="mt-auto" id="footer">
+    <div class="text-center mt-4 mb-4">&copy 2022 Mobile Web 3D Applications <a href="javascript:swap_theme()">Switch
+        Theme</a> | <a href="https://github.com/hh419/3D-App">GitHub</a></div>
+</footer>
+
+<!-- modal for contact details and references -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="contact" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Contact</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Email:</h6>
+                <p>hh419@sussex.ac.uk</p>
+                <h6>References:</h6>
+                <p>https://benskitchen.com</p>
+                <h6>Statement of Originality:</h6>
+                <p>These web pages are submitted as part requirement for the degree of BSc.Compututing for 
+                    business management at the University of Sussex. 
+                    Tt is the product of my own labour except where indicated in the accompanying codebase. 
+                    This assignment may be freely copied and distributed provided the source is acknowledged. 
+                    I hereby give permission for a copy of this assignment to be loaned out to students in future years</p>
+                <h6>GitHub:</h6>
+                <p>https://github.com/hh419/3D-App</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

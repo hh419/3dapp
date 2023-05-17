@@ -1,0 +1,165 @@
+/* CSS Rules for Lab 1 using Bootstrap.  Note, these rules are laid out mobile first.  
+	That is, the smaller screen rules are shown first
+
+    Note, that CSS rule will propoagte up to larger devices, unless you modify them with a 
+    media query and change the rule
+*/
+
+/* Method to declare your own fonts */
+@font-face {
+	font-family: cocaColaFont;
+	src: url(../fonts/lokicola.ttf);
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in Bootstrap
+*/
+body {
+    background-color: rgb(245, 164, 98);
+}
+
+.main_contents {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Some simple CSS rules for styling p, h1 to h6, etc. in the main contents container
+*/
+
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oswald', sans-serif;
+	/* font-family: cocaColaFont; */
+}
+
+#main_3d_image {
+    background-image: url(../assets/images/main_3D_538.jpg);
+    background-repeat: no-repeat;
+    height: 201px;
+}
+
+#main_text {
+    float: left;
+    margin: 5%;
+    width: 90%;
+    display: block;
+    background-color: rgba(255,255,255,0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+#main_text h2 {
+    color: rgba(0,102,153,1);
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+#main_text h3 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#main_text p {
+    font-size: 12px;
+    margin: 0px;
+    line-height: 1.2;
+}
+
+
+/* Small devices (landscape phones, 576px and up)
+*/
+@media (min-width: 576px) {
+
+    body {
+        background-color: rgb(202, 181, 181);
+    }
+
+    #main_3d_image {
+        background-image: url(../assets/images/main_3D_768.jpg);
+        background-repeat: no-repeat;
+        height: 288px;
+    }
+
+    #main_text {
+        float: right;
+        margin-top: 7%;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up)
+*/
+@media (min-width: 768px) { 
+    
+    body {
+        background-color: rgb(218, 216, 148);
+    }
+
+    #main_3d_image {
+        background-image: url(../assets/images/main_3D_970.jpg);
+        background-repeat: no-repeat;
+        height: 363px;
+    }
+
+    #main_text {
+        float: right;
+        margin-top: 7%;
+    }
+
+    #main_text h2 {
+        color: crimson;
+        font-size: 30px;
+    }
+    
+    #main_text h3 {
+        color: darkcyan;
+        font-size:22px;
+    }
+    
+    #main_text p {
+        font-size: 15px;
+    }
+}
+
+/* Large devices (desktops, 992px and up)
+*/
+@media (min-width: 992px) {
+    #main_3d_image {
+        background-image: url(../assets/images/main_3D_1400.jpg);
+        background-repeat: no-repeat;
+        height: 524px;
+    }
+
+    #main_text {
+        float: right;
+        margin-top: 20%;
+    }
+
+    #main_text h2 {
+        color: crimson;
+        font-size: 30px;
+    }
+    
+    #main_text h3 {
+        color: darkcyan;
+        font-size:22px;
+    }
+    
+    #main_text p {
+        font-size: 15px;
+    }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)
+*/
+@media (min-width: 1200px) { 
+    #main_3d_image {
+        background-image: url(../assets/images/main_3D_2048.jpg);
+        background-repeat: no-repeat;
+        height: 700px;
+    }
+    
+}
